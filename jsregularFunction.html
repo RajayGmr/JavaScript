@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Regular Function</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function name(){
+        console.log("hello mayanmar");
+      }
+      name();
+
+      function printalart(){
+//        window.alert("Helllo Rajay");
+      }
+      printalart();
+
+      function hello(){
+        return "hello Rangon";
+      }
+      console.log(hello());
+      document.write(hello())
+      hello();
+
+      //parameter Function
+      function myfun1(city){
+        console.log("hello "+city);
+      }
+      myfun1("phuket");
+
+      function myfun2(city="Berlin"){
+        console.log(`hello ${city}`);
+      }
+      myfun2("myitkyina");
+      myfun2();
+
+      //multi parameter Function
+      function multi(x,y,z){
+        console.log(`x value is = ${x} and y value is = ${y} and z value is = ${z}`);
+      }
+      multi(1,2,3);
+
+      function multi1(x,y,z){
+        const result=x+y+z;
+        return result;
+      }
+      console.log(multi1(1,2,3));
+
+      //name less Function
+     let annfun=  function (a){
+        document.write("</br>"+"My value is 120"+a);
+      }
+      annfun(23);
+
+      //constructor functon (by string)
+      let confun=new Function("x","y", "return x+y");
+      console.log(confun(10,40));
+
+      //self invoking Function
+      //(IIFE) Imediately invoking funciton expression
+      //method 1
+      let selfun=function(a){
+        document.write("</br>"+`I am self invoking function, my values is ${a}`);
+      }(900);
+      +"<hr>"+
+
+      //method 2
+      (function(a){
+        document.write("</br>"+`I am self invoking function, my values is ${a}`);
+      })(12000);
+
+      //Using function to function
+      function funone(){
+        return "hello world";
+      }
+      function funtwo(fun){
+        return fun;
+      }
+      console.log(funtwo(funone()));
+
+      //get function Name (.name)
+      function funthree(){
+        return "hello jack";
+      }
+      function funfour(fun){
+        console.log(fun.name);
+      }
+      funfour(funthree);
+
+    </script>
+
+  </body>
+</html>

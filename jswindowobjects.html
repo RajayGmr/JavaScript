@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>window Object</title>
+  </head>
+  <body>
+    <!-- <div class="" style="margin-top:1000px">
+
+    </div><hr> -->
+    <button type="button" name="button" onclick="printme()">Print</button>
+    <button type="button" name="button" onclick="reloadme()">Reload</button>
+    <hr>
+
+    <script type="text/javascript">
+      //console.log("hey");
+
+      //alert
+      //window.alert("hello world");
+
+      //prompt
+      // const input=prompt("enter number");
+      // console.log(input);
+      // console.log(typeof input);
+
+      //confirm
+      // if(confirm("Are you sure")){
+      //   console.log("Yes, i want to delete");
+      // }else{
+      //   console.log("No, i don't want");
+      // }
+
+      //print
+      //window.print();
+      function printme(){
+      //  window.print();
+      //print();
+      }
+
+      let val;
+      //Outer width
+      // val=window.outerWidth;
+      // console.log("This is outer width+ " +val);
+
+      //inner width
+      // val=window.innerWidth;
+      // console.log("This is inner width+ " +val);
+
+      //outer height
+      // val=window.outerHeight;
+      // console.log("This is outer height " +val);
+
+      //inner height
+      // val=window.innerHeight;
+      // console.log("This is inner height " +val);
+
+      //scroll points
+      // val=window.scrollY;
+      // console.log("Scroll value " +val);
+
+      //location object
+      val=window.location;
+      //console.log(val);
+
+      //redirect
+      //window.location.href="https://google.com";
+
+      //reload
+      //window.location.reload();
+      // function reloadme(){
+      //   window.location.reload();
+      // }
+
+      //Navigator object
+      // val =window.navigator;
+      // console.log(val);
+      document.write('appName = '+ window.navigator.appName + "</br>");
+      document.write('appVersion = '+ window.navigator.appVersion + "</br>");
+      document.write('userAgent = '+ window.navigator.userAgent + "</br>");
+      document.write('platform = '+ window.navigator.platform + "</br>");
+      document.write('javaenabled() = '+ window.navigator.javaEnabled() + "</br>");
+      document.write('language = '+ window.navigator.language + "</br>");
+      document.write('onLine = '+ window.navigator.onLine + "</br>");
+
+
+
+
+
+    </script>
+
+  </body>
+</html>

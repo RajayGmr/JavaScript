@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Statement</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+     //Ternary Operator(?)
+     // num1 > num2 ? True : False
+     const x=100;
+     const y=200;
+     console.log(x > y ? "True" : "false");
+
+     const num1="3";
+     const num2=2;
+     document.write("Equall to(==) result = " + (num1 == num2 ? "True" : "False") + "<br>");
+     document.write("Equall to(===) result = " + (num1 === num2 ? "True" : "False") + "<br>");
+     document.write("Not Equall to(!=) result = " + (num1 != num2 ? "True" : "False") + "<br>");
+
+     //if Statement
+     if(num1<num2){
+       document.write("Num2 is bigger than Num1"+"<br>");
+     }else if(num1>num2){
+       document.write("Num2 is less than Num1"+"<br>");
+     }else{
+       document.write("Num1 and Num2 has same value"+"<br>");
+     }
+     //switch statement
+     const a=3;
+     switch (a) {
+       case 1:
+         document.write("a value is 1"+"<br>");
+         break;
+      case 2:
+         document.write("a value is 2"+"<br>");
+         break;
+      case 3:
+         document.write("a value is 3"+"<br>");
+         break;
+      default:
+         document.write("I do not know"+"<br>");
+         break;
+     }
+
+     let today;
+     let daycount=new Date().getDay();
+     switch (daycount) {
+       case 0:
+         today="sunday";
+         break;
+      case 1:
+         today="Monday";
+         break;
+      case 2:
+         today="Tuesday";
+         break;
+     case 3:
+         today="Wedneday";
+         break;
+     case 4:
+         today="Thursday";
+         break;
+     case 5:
+         today="Friday";
+         break;
+   default:
+         today="Satursday";
+         break;
+
+     }
+     document.write("Today is " + today +"<br>");
+
+     const username=prompt("Enter Username");
+     const pass=prompt("Enter Password");
+
+     if(username=="rajay" && pass=="123456"){
+       console.log("Welcome");
+     }else{
+       console.log("Try again");
+     }
+
+
+    </script>
+
+  </body>
+</html>

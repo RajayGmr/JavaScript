@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Type Conversion</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let val;
+      //number to String
+        val =String(4);
+        val1=(5).toString();
+
+        //boolean to String
+        // b=String(false);
+        b=false.toString();
+        //Date to String
+        d=String(new Date);
+        //array to String
+        a=["100","200","300","400"];
+        a=String(a);
+       //String to interval
+       val2="5";
+        val2=Number(val2);
+       //val2=+val2;
+       val3=prompt("Enter Number");
+       // val3=Number(val3)+10;
+       val3=parseFloat(val3);
+
+       //boolean to Number
+       val4=true;
+       val4=Number(val4);
+
+      // fix number
+      val5=200.784578537
+
+
+
+      console.log(val);
+      console.log(typeof val);
+      console.log(val1);
+      console.log(typeof val1);
+      console.log(b);
+      console.log(typeof b);
+      console.log(d);
+      console.log(typeof d);
+      console.log(a);
+      console.log(typeof a);
+      console.log(val2);
+      console.log(typeof val2);
+      console.log(val3);
+      console.log(typeof val3);
+      console.log(val4);
+      console.log(typeof val4);
+      console.log(val5);
+      console.log(typeof val5);
+      console.log(val5.toFixed(8));
+
+    </script>
+
+  </body>
+</html>

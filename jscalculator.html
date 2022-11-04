@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Calculator</title>
+  </head>
+  <body>
+    <!-- <form class="" action="" method=""> -->
+      <label for="firstnum">First Number</label>
+      <input type="text" name="firstnum" value="" id="firstnum" class=""><br><br>
+      <label for="secondnum">Second Number</label>
+      <input type="text" name="secondnum" value="" id="secondnum" class=""><br><br>
+
+      <button type="button" name="add" id="add" class="" onclick="sign('+')">+</button>
+      <button type="button" name="sub" id="sub" class="" onclick="sign('-')">-</button>
+      <button type="button" name="multi" id="multi" class="" onclick="sign('x')">x</button>
+      <button type="button" name="div" id="div" class="" onclick="sign('/')">/</button>
+      <button type="button" name="modu" id="modu" class="" onclick="sign('%')">%</button>
+
+      <button type="button" name="cal" id="cal" class="" onclick="calculate()">=</button><br><br>
+      <input type="text" name="result" value="" id="result" class=""><br><br>
+
+      <input type="text" name="tempsign" value="" id="tempsign" class="">
+
+    <!-- </form> -->
+
+    <script type="text/javascript">
+
+      function sign(sign){
+  //      console.log(sign);
+  document.getElementById('tempsign').value=sign;
+
+}
+function calculate(){
+//      console.log('jeu');
+let num1=Number(document.getElementById('firstnum').value);
+let num2=Number(document.getElementById('secondnum').value);
+//console.log(typeof num1, typeof num2);
+let getsign=document.getElementById('tempsign').value;
+let cal;
+switch (getsign) {
+  case "+":
+    cal=num1+num2;
+    break;
+  case "-":
+     cal=num1-num2;
+      break;
+  case "x":
+     cal=num1*num2;
+        break;
+  case "/":
+        cal=num1/num2;
+          break;
+  case "%":
+          cal=num1%num2;
+            break;
+  default:
+  window.alert("No sign");
+
+}
+document.getElementById('result').value=cal;
+
+}
+
+
+
+    </script>
+
+  </body>
+</html>

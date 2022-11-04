@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Array</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let m=[];
+      m[2]="blue";
+      m[0]="green";
+      m[1]="red";
+      m[3]="black";
+      console.log(m);
+      console.log(m[1]);
+
+      //Array methods
+      //it's array or //
+      console.log(Array.isArray(m));
+      //Array datatype to string datatype
+      console.log(m.toString());
+      //Array to String by special chars
+      console.log(m.join("*"));
+
+      m[4]="White";
+      console.log(m);
+      m.push("pink","gold");
+      console.log(m);
+      console.log(m.length);
+       //remove value from last
+      m.pop();
+      console.log(m);
+      console.log(m.length);
+      //remove value from front
+      m.shift();
+      console.log(m);
+      console.log(m.length);
+
+      //remove value(delete is note remove index number)
+      delete m[2];
+      console.log(m);
+      console.log(m.length);
+      // add data from front
+      m.unshift("voilet");
+      console.log(m);
+      console.log(m.length);
+
+      let q=m.splice(1,4);
+      console.log(q);
+
+      //array combine
+      const  arr1=["aung aung","maung maung","kyaw kyaw"];
+      const arr2=["mya mya","hla hla","su su"];
+      const arr3=[123,456,789];
+      console.log(arr1.concat(arr2));
+      console.log(arr1.concat(arr3));
+
+      //array sorting
+      const arr4=arr1.concat(arr2);
+      console.log(arr4.sort());
+      console.log(arr4.reverse());
+
+      const arr5=[700,100,50,800,200,150,10];
+       console.log(arr5.sort());
+
+       let arrfun=[];
+       const arrone=function(){
+         console.log("I am arrone");
+       }
+       const arrtwo=function(){
+         console.log("i am arrtwo");
+       }
+       const arrthree=function(){
+         console.log("I am array three");
+       }
+       arrfun.push(arrone);
+       arrfun.push(arrtwo);
+       arrfun.push(arrthree);
+       console.log(arrfun);
+
+       //
+       const output=arrfun.filter(function(arrfun){
+         // if(arrfun==arrtwo){
+         //   return arrfun;
+         // }
+
+         // return arrfun ===arrtwo;
+         // if(arrfun !=arrone){
+         //   return arrfun;
+         // }
+         return arrfun !== arrone;
+       });
+       console.log(output);
+
+
+
+    </script>
+  </body>
+</html>

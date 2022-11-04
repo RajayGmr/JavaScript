@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Object Literals</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Js object (Array as object(Json -API))
+      let obj1={
+        firstname:"Rajay",
+        lastname:"Ghimire"
+
+      };
+      console.log(obj1);
+      console.table(obj1);
+      console.log(obj1.firstname);
+
+      let obj2={
+        firstname:"kyaw",
+        lastname:"Gyi",
+        age:53,
+        email:"kyawgyi@gmail.com",
+        hobbies:["tictok","football","swimming"],
+        address:{
+          Street:"Tamwe",
+          city:"Yangon"
+        },
+        phone: "067826413"
+
+      };
+      console.log(obj2);
+      console.table(obj2);
+      console.log(obj2.firstname);
+      console.log(obj2.lastname);
+      console.log(obj2.age);
+      console.log(obj2.email);
+      console.log(obj2.hobbies[1]);
+      console.log(obj2.address.city);
+      console.log(obj2.phone);
+
+      const todo={
+        add:function(){
+          console.log("Add todo...");
+        },
+        edit:function(x){
+          console.log("Have to " +x);
+        },
+        delete:function(){
+          console.log("Delete all note");
+        }
+      };
+      todo.addmore=function(){
+        console.log("Add more...");
+      }
+      todo.add();
+      todo.addmore();
+
+    </script>
+
+  </body>
+</html>

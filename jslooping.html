@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Looping</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      for (var i = 0; i < 10; i++) {
+        if(i==2){
+          console.log("2 is my Fav Number");
+          break;
+        }
+        console.log("Number :"+i);
+      }
+      console.log("number is : "+i);
+
+      let myarr=["red","green","black","gray","blue","pink"];
+      console.log(myarr.length);
+      for (var i = 0; i < myarr.length; i++) {
+        if(myarr[i]=='black'){
+          console.log("My fav color is : "+ myarr[i]);
+        }
+        console.log(myarr[i]);
+      }
+
+      let people=[
+      {name:'Aung Aung', age:20},
+      {name:'su su', age: 21},
+      {name:"mya mya",age: 22}
+    ];
+    for (var i = 0; i < people.length; i++) {
+      document.write(people[i].name+"<br>");
+      console.log(people[i].age);
+    }
+
+    //for IN Loop
+    let student={
+      name:"Rajay",
+      address:"Bangkok",
+      job: "Developer"
+    };
+    //console.log(student.name);
+    for(key in student){
+      document.write(key +" is : "+ student[key] +"</br>")
+      console.log(key);
+    }
+
+    let rj=["red","green","black","gray","blue","pink"];
+    for(key in rj){
+      document.write(key + " is " + rj[key]+"<br>");
+    }
+
+    //while Loop
+    let b=0;
+    while(b<10){
+      document.write("B value is = " +b+"</br>");
+      console.log("B value is = " +b);
+      b++;
+    }
+    let l=0;
+    while (l<rj.length) {
+      document.write("Color is " + rj[l] +"</br>");
+      l++;
+
+    }
+
+    //do while Loop
+    let n=0;
+    do {
+      document.write("N value is = " +n+"</br>");
+      console.log("N value is = " +n);
+      n++;
+
+    } while (n<10);
+
+    //foreach Loop
+      let color=["red","green","black","gray","blue","pink"];
+      // color.forEach(function(color) {
+      //   document.write(color +" color"+"</br>");
+      // });
+      color.forEach((color, i) => {
+          document.write("value of index number of " +i + " is " +color +" are color"+"</br>");
+      });
+
+      //map
+      const users=[
+        {id:1, name:"aung aung"},
+        {id:2, name:"mg mg"},
+        {id:3,name:"su su"}
+      ];
+      const ids=users.map(function(user){
+        return user.id;
+      });
+      console.log(ids);
+
+
+
+    </script>
+
+  </body>
+</html>

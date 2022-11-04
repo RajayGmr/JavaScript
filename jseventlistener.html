@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS EventListener</title>
+  </head>
+  <body>
+    <div class="">
+      <div class="paragraph" id="paragraph">
+        <p id="pgh">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <!-- <button type="button" name="button" id="hideme" onclick="hideme()">Hide Me</button> -->
+        <button type="button" name="button" id="hideme">Hide Me</button>
+        <hr>
+        <div class="">
+          <p id="greeting">I Love Myanmar</p>
+          <button type="button" name="red" id="red">Red</button>
+          <button type="button" name="blue" id="blue">blue</button>
+          <button type="button" name="green" id="green">Green</button>
+          <button type="button" name="Orange" id="orange">Orange</button>
+
+        </div>
+        <hr>
+        <div class="">
+          <label for="gender">Gender</label>
+          <select class="gender" name="" id="gender" class="" onchange="getgender()">
+            <option value="" disabled selected>Choose Gender</option>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+
+          </select>
+
+        </div>
+        <hr>
+
+
+        <div class="">
+          <label for="country">Country</label>
+          <select class="" name="country" id="country" onchange="getcountry()">
+            <option value="">Choose Country</option>
+            <option value="mm">Myanmar</option>
+            <option value="th">Thailand</option>
+          </select>
+
+          <br>
+          <div class="" id="mmcity">
+            <input type="radio" name="city" value="ygn" id="ygn" class="">
+            <label for="ygn">Yangon</label>
+
+            <input type="radio" name="city" value="mdy" id="mdy" class="">
+            <label for="mdy">Mandalay</label>
+
+            <input type="radio" name="city" value="mkn" id="mkn" class="">
+            <label for="mkn">Myitkyina</label>
+
+          </div>
+
+          <div class="" id="thcity">
+            <input type="radio" name="city" value="bkk" id="bkk" class="">
+            <label for="bkk">Bangkok</label>
+
+            <input type="radio" name="city" value="phk" id="phk" class="">
+            <label for="phk">Phuket</label>
+
+            <input type="radio" name="city" value="pty" id="pty" class="">
+            <label for="pty">Pattaya</label>
+
+          </div>
+
+        </div>
+
+        <hr>
+        <form class="" action="" method="">
+          <label for="name">Name</label>
+          <input type="text" name="name" value="" id="name" class="" onchange="myfun()">
+          <br><br>
+          <label for="address">Address</label>
+          <input type="text" name="address" value="" id="address" class="" >
+
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+      // function hideme(){
+      //    let pgh=document.getElementById('pgh');
+  //     console.log(pgh);
+      //   pgh.style.display="none";
+      //
+      // }
+      let pgh=document.getElementById('pgh');
+      let btn=document.getElementById('hideme')
+//      console.log(pgh);
+        btn.addEventListener('click',function(){
+//          console.log('hey');
+           // pgh.style.display="none";
+           // btn.innerText="show me";
+
+           if(pgh.style.display==="none"){
+             pgh.style.display="block";
+             btn.innerText="Hide Me";
+           }else{
+             pgh.style.display="none";
+             btn.innerText="show me";
+           }
+        });
+
+        //button for color
+        let grt=document.getElementById('greeting');
+        document.getElementById('red').addEventListener('click', function(){
+          grt.style.color="Red";
+        });
+        document.getElementById('blue').addEventListener('click', function(){
+          grt.style.color="Blue";
+        });
+        document.getElementById('green').addEventListener('click', function(){
+          grt.style.color="Green";
+        });
+        document.getElementById('orange').addEventListener('click', function(){
+          grt.style.color="orange";
+        });
+
+        // FOR Gender
+        function getgender(){
+      //    console.log("hey");
+      let gnd=document.getElementById("gender");
+      // console.log(gnd.value);
+      // console.log(typeof gnd.value);
+      switch (gnd.value) {
+        case "0":
+        alert("Thanks Lady");
+          break;
+          case "1":
+          alert("Thanks Thar gyi");
+          break;
+        default:
+
+      }
+    }
+
+    //For country
+    document.getElementById('mmcity').style.display="none";
+    document.getElementById('thcity').style.display="none";
+
+    function getcountry(){
+      let city=document.getElementById("country");
+      console.log(city.value);
+      switch (city.value) {
+        case "mm":
+          document.getElementById('mmcity').style.display="block";
+          document.getElementById('thcity').style.display="none";
+          break;
+        case "th":
+            document.getElementById('thcity').style.display="block";
+            document.getElementById('mmcity').style.display="none";
+            break;
+
+        default:
+
+      }
+    }
+
+    //for text
+    function myfun(){
+      //console.log('thank for your typing');
+      let textname=document.getElementById('name');
+      console.log(textname.value);
+      textname.value= textname.value.toUpperCase();
+    }
+
+
+
+    </script>
+
+  </body>
+</html>

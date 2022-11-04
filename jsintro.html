@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro To JS</title>
+  </head>
+  <body>
+    <p>Welcome to JS</p>
+    <b id="poem">Welcome to JS and Start road to Web DEV</b><br>
+    <img src="C:/Users/Rajay/Desktop/WebP/img/profile/icon4.jpg" alt="" id="funny"><br><br>
+    <button type="button" name="button" onclick="document.getElementById('funny').src='C:/Users/Rajay/Desktop/WebP/img/profile/icon3.png'">Amazing</button>
+    <button type="button" name="button" onclick="document.getElementById('funny').src='C:/Users/Rajay/Desktop/WebP/img/profile/icon5.jpg'">haha</button>
+    <button type="button" name="button" onclick="document.getElementById('funny').src='C:/Users/Rajay/Desktop/WebP/img/profile/icon6.png'">shame</button><br><br><hr>
+
+    <script type="text/javascript">
+    console.log("Aung Aung");
+    console.log('Kyaw Kyaw');
+    console.log(1+4);
+    console.log("rajay","anil",50000,40000);
+    console.log(true);
+    console.log(false);
+    console.log(10+true);
+    console.log(30+false);
+
+    // window.alert("Hello Rajay");
+    // alert("Hi again");
+    //say helo to js
+    document.write("Say Hi to JS");
+    document.write("</br>");
+    const r="rajay";
+    console.log(r);
+    const x=10;
+    const y=9;
+    console.log(x+y);
+//    backtick(``)
+    console.log(`r`);
+    console.log(`${r}`);
+    console.log("I am " + r);
+
+    var num1=1500;
+    const num2=1000;
+    console.log(num1);
+    console.log(num1 + num2);
+    console.log(num1 - num2);
+
+    //concatenate(+)
+    const name1="mg mg";
+    const name2="kyaw"
+    console.log(name1 + ' ' + name2 + " is my friend");
+    let greeting="Hello";
+    let city1="Rangon";
+    let city2="Mandaly";
+    console.log(greeting+ " " + city1 + "and " + city2);
+    console.log(`${greeting}  ${city2} and ${city1}`);
+    document.write("<hr>");
+    document.write(`${greeting}  ${city2} and ${city1}`);
+    document.write("</br>");
+    let myfather="He's is my father";
+    console.log(myfather);
+
+    // let abc=document.getElementById("poem");
+    // console.log(abc);
+    // document.getElementById("poem").textContent=myfather;
+    document.getElementById("poem").innerText=`${greeting}  ${city2} and ${city1}`
+
+    </script>
+
+  </body>
+</html>

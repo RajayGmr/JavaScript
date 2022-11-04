@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    //  console.log("hey");
+
+    //local storage
+    //storage
+
+    // localStorage.setItem('name',"Rajay");
+    // localStorage.setItem('age',23);
+    // localStorage.setItem('city',"Bangkok");
+
+    //Update
+    //method 1
+  //  localStorage.setItem('name',"Anil");
+
+    //method 2
+    //localStorage.name="raj";
+
+    //GEt data from localStorage
+    const getname=localStorage.getItem('name');
+      const getage=localStorage.getItem('age');
+        const getcity=localStorage.getItem('city');
+        document.write(getname);
+        document.write('<br>')
+        document.write(getage);
+        document.write('<br>')
+        document.write(getcity);
+        document.write('<br>')
+
+        //Destroy
+        //single Destroy
+        // localStorage.removeItem('name');
+        // localStorage.removeItem('age');
+        // localStorage.removeItem('city');
+
+        //all Destroy
+        localStorage.clear();
+
+        //session storage
+        //storage
+        sessionStorage.setItem('name', 'su su');
+        sessionStorage.setItem('age',30);
+        sessionStorage.setItem('city', "yangon");
+
+        //Update
+        //method 1
+        sessionStorage.setItem('name','Mya Mya');
+        //method 2
+        sessionStorage.age=40;
+
+        //get data from session storage
+        const getname2=sessionStorage.getItem('name');
+        const getage2=sessionStorage.getItem('age');
+        const getcity2=sessionStorage.getItem('city');
+        document.write(getname2);
+        document.write('<br>')
+        document.write(getage2);
+        document.write('<br>')
+        document.write(getcity2);
+        document.write('<br>')
+
+        //Destroy
+        //single Destroy
+        sessionStorage.removeItem('age');
+
+        //all Destroy
+        sessionStorage.clear();
+
+
+
+
+
+    </script>
+
+  </body>
+</html>
